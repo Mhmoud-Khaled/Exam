@@ -1,0 +1,31 @@
+<div class="body">
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+    <form [formGroup]="userForm">
+      <h3>تسجيل دخول</h3>
+
+      <div class="radio">
+        <div class="student">
+          <input type="radio" id="student" value="student" (change)="role($event)" formControlName="type">
+          <label for="student">طالب</label><br />
+        </div>
+        <div class="doctor">
+          <input type="radio" id="doctor" value="doctor" (change)="role($event)" formControlName="type">
+          <label for="doctor">دكتور</label><br />
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="username">الايميل</label>
+        <input type="email" placeholder="الايميل" id="username" formControlName="email">
+
+        <label for="password">كلمه المرور</label>
+        <input type="password" placeholder="كلمه المرور" id="password" formControlName="password">
+      </div>
+      <button class="bg-danger" [disabled]="!userForm.valid" (click)="submit()">دخول</button>
+
+      <a class="newUser" routerLink="../register">أنشاء حساب؟</a>
+    </form>
+  </div>

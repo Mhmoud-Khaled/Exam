@@ -1,0 +1,36 @@
+<div class="examBox">
+  <div class="examhead text-center"><h2>اختبار {{subjectName}}</h2></div>
+  <div class="quizBox" *ngFor="let ques of questions; let index = index">
+      <strong ><span class="text-danger">سؤال {{index+1}}. </span>{{ques.question}}</strong>
+      <div class="row mt-3" >
+          <div class="col-md-6 col-sm-12">
+              <mat-radio-button *ngIf="role != 'doctor' && !showResult && !tested" name={{index}} value={{ques.answer1}} color="warn" (change)="getAnswer($event)"></mat-radio-button>
+              <label>A.{{ques.answer1}}</label>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <mat-radio-button *ngIf="role != 'doctor' && !showResult && !tested" name={{index}} value={{ques.answer2}} color="warn" (change)="getAnswer($event)" ></mat-radio-button>
+            <label>B.{{ques.answer2}}</label>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <mat-radio-button *ngIf="role != 'doctor' && !showResult && !tested" name={{index}} value={{ques.answer3}} color="warn" (change)="getAnswer($event)"></mat-radio-button>
+          <label>C.{{ques.answer3}}</label>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <mat-radio-button *ngIf="role != 'doctor' && !showResult && !tested" name={{index}} value={{ques.answer4}} color="warn" (change)="getAnswer($event)"></mat-radio-button>
+        <label>D.{{ques.answer4}}</label>
+    </div>
+
+      </div>
+      <div class="text-start">
+          <button mat-raised-button *ngIf="role === 'doctor'" color="warn" (click)="delete(index)">حذف</button>
+      </div>
+      <hr>
+  </div>
+  <div class="text-center" *ngIf="role != 'doctor' ">
+    <button class="btn btn-success px-5 fs-5 mb-3" *ngIf="!showResult  && !tested" (click)="result()"> النتيجة</button><br>
+    <span class="fs-4 text-success" *ngIf="tested ">تم امتحانه مسبقا</span> <br>
+    <span class="fs-4 text-success" *ngIf="showResult "> مجموع الاسئله: {{totalQuestions}}</span> <br>
+    <span class="fs-4 text-success" *ngIf="showResult || tested"> الاجابات الصحيحه: {{correctAnswer}} </span>
+  </div>
+
+</div>

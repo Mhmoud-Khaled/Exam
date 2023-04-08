@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">كود الطالب</th>
+        <th scope="col">إسم الطالب</th>
+        <!-- <th scope="col" *ngFor="let item of subjects; let index = index">{{item.subjectName}}</th> -->
+        <th scope="col">المادة</th>
+        <th scope="col">الدرجة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let row of subjects; let index = index">
+          <ng-container *ngFor="let user of row.userTested; let y = index">
+            <tr>
+              <th scope="row">{{user.userID}}</th>
+              <td>{{user.userName}}</td>
+              <td>{{row.subjectName}}</td>
+              <td>{{user.degree}}</td>
+            </tr>
+          </ng-container>
+
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+

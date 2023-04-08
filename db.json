@@ -1,0 +1,112 @@
+{
+  "student": [
+    {
+      "username": "mahmoud",
+      "email": "mahmoud@gmail.com",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "doctor": [
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "subject": [
+    {
+      "subjectName": "الرياضيات",
+      "question": [
+        {
+          "question": "5*5",
+          "answer1": "25",
+          "answer2": "30",
+          "answer3": "35",
+          "answer4": "40",
+          "correct": "25",
+          "studentVAlue": "25",
+          "answer": true
+        },
+        {
+          "question": "9*9",
+          "answer1": "80",
+          "answer2": "81",
+          "answer3": "82",
+          "answer4": "83",
+          "correct": "81",
+          "studentVAlue": "81",
+          "answer": true
+        },
+        {
+          "question": "1*1",
+          "answer1": "1",
+          "answer2": "2",
+          "answer3": "3",
+          "answer4": "4",
+          "correct": "1",
+          "studentVAlue": "3",
+          "answer": false
+        },
+        {
+          "question": "30*3",
+          "answer1": "900",
+          "answer2": "09",
+          "answer3": "90",
+          "answer4": "9",
+          "correct": "90",
+          "studentVAlue": "90",
+          "answer": true
+        }
+      ],
+      "userTested": [
+        {
+          "userID": 1,
+          "degree": 3,
+          "userName": "mahmoud"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "subjectName": "لغة عربية",
+      "question": [
+        {
+          "question": "مفرد كلمة اقلام",
+          "answer1": "قلم",
+          "answer2": "قلمه",
+          "answer3": "تيست",
+          "answer4": "ورقه",
+          "correct": "قلم",
+          "studentVAlue": "قلم",
+          "answer": true
+        },
+        {
+          "question": "جمع طائر",
+          "answer1": "طيور",
+          "answer2": "طائر",
+          "answer3": "طائره",
+          "answer4": "طائرات",
+          "correct": "طيور",
+          "studentVAlue": "طيور",
+          "answer": true
+        }
+      ],
+      "userTested": [
+        {
+          "userID": 1,
+          "degree": 2,
+          "userName": "mahmoud"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "userTested": [],
+  "login": [
+    {
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">فاينال</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName !== null && userName !== undefined && role === 'doctor'" class="nav-link"  routerLink="/newExam">أختبار جديد</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName !== null && userName !== undefined && role === 'doctor'" class="nav-link"  routerLink="/student">الطلاب</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName !== null && userName !== undefined" class="nav-link"  routerLink="/subject">المواد</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName !== null && userName !== undefined" class="nav-link"  routerLink="/login" (click)="logOut()">خروج</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName === null || userName === undefined" class="nav-link"  routerLink="/login">دخول</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a *ngIf="userName === null || userName === undefined" class="nav-link" routerLinkActive="active" routerLink="/register">تسجيل</a>
+        <li *ngIf="userName !== null && userName !== undefined" class="nav-item" id="username">{{userName}}</li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+

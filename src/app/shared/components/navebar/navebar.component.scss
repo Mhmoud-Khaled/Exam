@@ -1,0 +1,45 @@
+.container-fluid{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navbar{
+  background-color: rgb(185, 8, 8) !important;
+}
+
+a{
+  color: white !important;
+  font-size: larger;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+
+a:hover{
+  background-color: #920202;
+}
+.navbar-brand{
+  font-size: 30px;
+}
+
+#navbarNav{
+  justify-content: flex-end !important ;
+}
+
+
+#username{
+  border-radius: 30px;
+  border: 3px solid rgb(231, 33, 33);
+  font-size: 15px;
+  padding: 8px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.active{
+  background-color: #920202 ;
+  border-radius: 30px;
+}

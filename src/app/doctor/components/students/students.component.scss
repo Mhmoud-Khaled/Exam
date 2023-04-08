@@ -1,0 +1,17 @@
+.container-fluid{
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.table-striped{
+  border: 1px solid #d4d4d4;
+  text-align: center;
+  box-shadow: 6px 5px 20px 0px #64646470;
+
+  th{
+    background-color: rgb(185, 8, 8) !important;
+    color: white;
+    text-align: center;
+  }
+}

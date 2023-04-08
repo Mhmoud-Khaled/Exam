@@ -1,0 +1,42 @@
+<div class="body">
+  <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>
+  <form [formGroup]="userForm">
+      <h3>مستخدم جديد</h3>
+
+    <div class="input">
+      <div class="userMail">
+
+        <div class="user">
+          <label for="username">اسم المستخدم</label>
+          <input type="text" placeholder="اسم المستخدم" id="username" formControlName="username">
+        </div>
+
+        <div class="email">
+          <label for="username">الايميل</label>
+          <input type="email" placeholder="الايميل" id="email" formControlName="email">
+        </div>
+
+      </div>
+
+
+      <div class="pass">
+        <div class="firstpass">
+          <label for="password">كلمه المرور</label>
+          <input type="password" placeholder="كلمه المرور" id="password" formControlName="password">
+        </div>
+
+        <div class="secondpass">
+          <label for="password">تأكيد كلمه المرور</label>
+          <input type="password" placeholder="تأكيد كلمه المرور" id="checkpassword" formControlName="confirmPassword">
+        </div>
+        </div>
+
+    </div>
+      <button class="bg-danger" [disabled]="!userForm.valid || (userForm.value.password !== userForm.value.confirmPassword)" (click)="submit()">انشاء حساب</button>
+      <a class="newUser" routerLink="../login">أمتلك حساب بالفعل؟</a>
+  </form>
+
+</div>
